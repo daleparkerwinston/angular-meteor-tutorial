@@ -1,0 +1,16 @@
+<div *ngIf="!user">
+    Please log in to add party
+</div>
+<form [formGroup]="addForm" (ngSubmit)="addParty()" *ngIf="user">
+    <label for="name">Name</label>
+    <input type="text" id="name" formControlName="name">
+
+    <label for="description">Description</label>
+    <input type="text" id="description" formControlName="description">
+
+    <label for="location">Location</label>
+    <input type="text" id="location" formControlName="location">
+
+    <button type="submit">Add</button>
+</form>
+
