@@ -23,8 +23,9 @@ export class PartiesFormComponent implements OnInit {
     ngOnInit() {
         this.addForm = this.formBuilder.group({
             name: ['', Validators.required],
-            description: [],
-            location: ['', Validators.required]
+            description: [''],
+            location: ['', Validators.required],
+            isPublic: [false]
         });
     }
 
